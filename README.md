@@ -12,3 +12,5 @@ Just follow the steps below:
 1. Enter the total amount of data on your plan
 1. Enter the amount you owe for overages
 1. Finally stop paying for other people's data!
+
+#### The calculator will ** only ** charge the people on your plan that used **over ** the data limit 
