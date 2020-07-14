@@ -9,28 +9,21 @@ import java.util.Scanner;
 public class Calculator {
 
     public static void main(String[] args) {
-        Consumer Austin = new Consumer("Austin");
-        Consumer Leslie = new Consumer("Leslie");
-        Consumer Sissy = new Consumer("Sissy");
-        Consumer Patrick = new Consumer("Patrick");
-        Consumer Mandi = new Consumer("Mandi");
-        Consumer Heather = new Consumer("Heather");
-        Consumer Logan = new Consumer("Logan");
-        Consumer Rick = new Consumer("Rick");
-
-        Consumer[] list = new Consumer[8];
-        list[0] = Austin;
-        list[1] = Leslie;
-        list[2] = Sissy;
-        list[3] = Patrick;
-        list[4] = Mandi;
-        list[5] = Heather;
-        list[6] = Logan;
-        list[7] = Rick;
 
         Scanner in = new Scanner(System.in);
         double cost;
+        int size;
+        
+        System.out.print("Enter the number of people on the data plan: ");
+        size = in.nextInt();
+        Consumer[] list = new Consumer[size];
 
+        for (int i = 0; i < list.length; i++) {
+            System.out.print("Enter the name of person " + i + " on the plan: ");
+            list[i] = (new Consumer(in.nextString()));
+            System.out.print("\n");
+        }
+        
         for (int i = 0; i < list.length; i++) {
             System.out.print("How much data did " + list[i].getName() + " use? ");
             list[i].setData(in.nextDouble());
